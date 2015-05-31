@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		074646C01B18EE2E00DDC4B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646BF1B18EE2E00DDC4B1 /* main.m */; };
 		074646C31B18EE2E00DDC4B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646C21B18EE2E00DDC4B1 /* AppDelegate.m */; };
-		074646C61B18EE2E00DDC4B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646C51B18EE2E00DDC4B1 /* ViewController.m */; };
 		074646C91B18EE2E00DDC4B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 074646C71B18EE2E00DDC4B1 /* Main.storyboard */; };
 		074646CB1B18EE2E00DDC4B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 074646CA1B18EE2E00DDC4B1 /* Images.xcassets */; };
-		074646CE1B18EE2E00DDC4B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 074646CC1B18EE2E00DDC4B1 /* LaunchScreen.xib */; };
 		074646DA1B18EE2E00DDC4B1 /* emailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646D91B18EE2E00DDC4B1 /* emailTests.m */; };
+		074646F31B1A132600DDC4B1 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F21B1A132600DDC4B1 /* Contact.m */; };
+		074646F61B1A3B8C00DDC4B1 /* ContactListDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F51B1A3B8C00DDC4B1 /* ContactListDataController.m */; };
+		074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */; };
+		074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */; };
+		074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */; };
+		075B48EF1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075B48EE1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +36,23 @@
 		074646BF1B18EE2E00DDC4B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		074646C11B18EE2E00DDC4B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		074646C21B18EE2E00DDC4B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		074646C41B18EE2E00DDC4B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		074646C51B18EE2E00DDC4B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		074646C81B18EE2E00DDC4B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		074646CA1B18EE2E00DDC4B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		074646CD1B18EE2E00DDC4B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		074646D31B18EE2E00DDC4B1 /* emailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074646D81B18EE2E00DDC4B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		074646D91B18EE2E00DDC4B1 /* emailTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = emailTests.m; sourceTree = "<group>"; };
+		074646F11B1A132600DDC4B1 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contact.h; path = email/Contact.h; sourceTree = "<group>"; };
+		074646F21B1A132600DDC4B1 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contact.m; path = email/Contact.m; sourceTree = "<group>"; };
+		074646F41B1A3B8C00DDC4B1 /* ContactListDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListDataController.h; sourceTree = "<group>"; };
+		074646F51B1A3B8C00DDC4B1 /* ContactListDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListDataController.m; sourceTree = "<group>"; };
+		074646F71B1A580000DDC4B1 /* ContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactListTableViewController.h; path = email/ContactListTableViewController.h; sourceTree = "<group>"; };
+		074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactListTableViewController.m; path = email/ContactListTableViewController.m; sourceTree = "<group>"; };
+		074646FC1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailTableViewController.h; sourceTree = "<group>"; };
+		074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailTableViewController.m; sourceTree = "<group>"; };
+		074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTableViewController.h; sourceTree = "<group>"; };
+		074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTableViewController.m; sourceTree = "<group>"; };
+		075B48ED1B1BB16B004C2FC5 /* ScheduleApptTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleApptTableViewController.h; sourceTree = "<group>"; };
+		075B48EE1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleApptTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,18 @@
 		074646B11B18EE2D00DDC4B1 = {
 			isa = PBXGroup;
 			children = (
+				074646F71B1A580000DDC4B1 /* ContactListTableViewController.h */,
+				074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */,
+				074646FC1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.h */,
+				074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */,
+				074646F41B1A3B8C00DDC4B1 /* ContactListDataController.h */,
+				074646F51B1A3B8C00DDC4B1 /* ContactListDataController.m */,
+				074646F11B1A132600DDC4B1 /* Contact.h */,
+				074646F21B1A132600DDC4B1 /* Contact.m */,
+				074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */,
+				074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */,
+				075B48ED1B1BB16B004C2FC5 /* ScheduleApptTableViewController.h */,
+				075B48EE1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m */,
 				074646BC1B18EE2E00DDC4B1 /* email */,
 				074646D61B18EE2E00DDC4B1 /* emailTests */,
 				074646BB1B18EE2E00DDC4B1 /* Products */,
@@ -83,11 +108,8 @@
 			children = (
 				074646C11B18EE2E00DDC4B1 /* AppDelegate.h */,
 				074646C21B18EE2E00DDC4B1 /* AppDelegate.m */,
-				074646C41B18EE2E00DDC4B1 /* ViewController.h */,
-				074646C51B18EE2E00DDC4B1 /* ViewController.m */,
 				074646C71B18EE2E00DDC4B1 /* Main.storyboard */,
 				074646CA1B18EE2E00DDC4B1 /* Images.xcassets */,
-				074646CC1B18EE2E00DDC4B1 /* LaunchScreen.xib */,
 				074646BD1B18EE2E00DDC4B1 /* Supporting Files */,
 			);
 			path = email;
@@ -200,7 +222,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				074646C91B18EE2E00DDC4B1 /* Main.storyboard in Resources */,
-				074646CE1B18EE2E00DDC4B1 /* LaunchScreen.xib in Resources */,
 				074646CB1B18EE2E00DDC4B1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				074646C61B18EE2E00DDC4B1 /* ViewController.m in Sources */,
+				074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */,
+				074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */,
+				074646F61B1A3B8C00DDC4B1 /* ContactListDataController.m in Sources */,
+				074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */,
 				074646C31B18EE2E00DDC4B1 /* AppDelegate.m in Sources */,
+				074646F31B1A132600DDC4B1 /* Contact.m in Sources */,
 				074646C01B18EE2E00DDC4B1 /* main.m in Sources */,
+				075B48EF1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +276,6 @@
 				074646C81B18EE2E00DDC4B1 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		074646CC1B18EE2E00DDC4B1 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				074646CD1B18EE2E00DDC4B1 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,6 +432,7 @@
 				074646DF1B18EE2E00DDC4B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		074646E01B18EE2E00DDC4B1 /* Build configuration list for PBXNativeTarget "emailTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +441,7 @@
 				074646E21B18EE2E00DDC4B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
