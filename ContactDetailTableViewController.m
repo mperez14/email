@@ -14,7 +14,7 @@
 
 @implementation ContactDetailTableViewController
 @synthesize contact;
-@synthesize lblEmail, lblFirstName, lblLastName;
+@synthesize lblEmail, lblFirstName, lblLastName, txtDate, txtTime;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -24,16 +24,33 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [lblFirstName setText:[contact first]];
-    
     [lblLastName setText:[contact last]];
     [lblEmail setText:[contact email]];
     
+    
+}
+
+- (IBAction)sendEmail:(id)sender {
+    NSLog(@"Email Sent");
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+/*
+- (BOOL)disablesAutomaticKeyboardDismissal {
+    return NO;
+}
+*/
+//dismiss keyboard
+-(BOOL)textFieldShouldReturn:(UITextField *)textFieldNew{
+    NSLog(@"dismiss");
+    return [textFieldNew resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+ 
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -78,5 +95,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

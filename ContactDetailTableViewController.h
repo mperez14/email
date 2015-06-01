@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Contact.h"
 
-@interface ContactDetailTableViewController : UITableViewController
+@interface ContactDetailTableViewController : UITableViewController <UITextFieldDelegate>
 
 @property (nonatomic,weak) Contact* contact;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblFirstName;
 @property (weak, nonatomic) IBOutlet UILabel *lblLastName;
 @property (weak, nonatomic) IBOutlet UILabel *lblEmail;
+@property (weak, nonatomic) IBOutlet UITextField *txtTime;
+@property (weak, nonatomic) IBOutlet UITextField *txtDate;
+
+- (IBAction)sendEmail:(id)sender;
 
 @end

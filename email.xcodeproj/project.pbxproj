@@ -17,7 +17,6 @@
 		074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */; };
 		074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */; };
 		074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */; };
-		075B48EF1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075B48EE1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +50,6 @@
 		074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailTableViewController.m; sourceTree = "<group>"; };
 		074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTableViewController.h; sourceTree = "<group>"; };
 		074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTableViewController.m; sourceTree = "<group>"; };
-		075B48ED1B1BB16B004C2FC5 /* ScheduleApptTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleApptTableViewController.h; sourceTree = "<group>"; };
-		075B48EE1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleApptTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +83,6 @@
 				074646F21B1A132600DDC4B1 /* Contact.m */,
 				074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */,
 				074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */,
-				075B48ED1B1BB16B004C2FC5 /* ScheduleApptTableViewController.h */,
-				075B48EE1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m */,
 				074646BC1B18EE2E00DDC4B1 /* email */,
 				074646D61B18EE2E00DDC4B1 /* emailTests */,
 				074646BB1B18EE2E00DDC4B1 /* Products */,
@@ -247,7 +242,6 @@
 				074646C31B18EE2E00DDC4B1 /* AppDelegate.m in Sources */,
 				074646F31B1A132600DDC4B1 /* Contact.m in Sources */,
 				074646C01B18EE2E00DDC4B1 /* main.m in Sources */,
-				075B48EF1B1BB16B004C2FC5 /* ScheduleApptTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,13 +21,13 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5aM-i0-xWR">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S4t-8t-G4d">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -43,6 +43,7 @@
                             <outlet property="delegate" destination="sfz-1q-lND" id="B85-5j-USp"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="259-KL-oNj"/>
                     <navigationItem key="navigationItem" title="Contacts" id="jV7-cu-sVW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B8z-ls-nR4">
                             <connections>
@@ -50,6 +51,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RF6-U6-q1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,7 +158,7 @@
                         <sections>
                             <tableViewSection headerTitle="Contact Information" id="uZo-hT-hra">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fx4-3q-EPD" style="IBUITableViewCellStyleDefault" id="irx-Du-2An">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fx4-3q-EPD" style="IBUITableViewCellStyleDefault" id="irx-Du-2An">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="irx-Du-2An" id="In1-QF-jR4">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -167,13 +169,13 @@
                                                         <accessibilityTraits key="traits" none="YES" button="YES" staticText="YES"/>
                                                     </accessibility>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="TsT-Hi-moj" style="IBUITableViewCellStyleDefault" id="RNi-9u-dqm">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="TsT-Hi-moj" style="IBUITableViewCellStyleDefault" id="RNi-9u-dqm">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RNi-9u-dqm" id="Kc0-NK-c6K">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -181,13 +183,13 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TsT-Hi-moj">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Jh4-Du-UTX" style="IBUITableViewCellStyleDefault" id="5KH-t6-pf6">
+                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Jh4-Du-UTX" style="IBUITableViewCellStyleDefault" id="5KH-t6-pf6">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5KH-t6-pf6" id="FJn-ey-aZi">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -195,7 +197,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jh4-Du-UTX">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -205,22 +207,54 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Schedule Appointment" id="fEu-a9-UAb">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KLy-2O-tEq">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KLy-2O-tEq">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KLy-2O-tEq" id="5qi-kD-ebM">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Appointment Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J5l-6H-nrm">
+                                                    <rect key="frame" x="8" y="7" width="276" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="3eS-mu-ab5" id="ion-Xt-a1k"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GPV-xa-aAY">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GPV-xa-aAY" id="mxo-xT-lfV">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Appointment Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Gc-DK-dKM">
+                                                    <rect key="frame" x="8" y="5" width="276" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="3eS-mu-ab5" id="2k5-eV-Jay"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Eap-IS-J0c">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eap-IS-J0c" id="yup-AA-IUg">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZV-Ky-4xY">
+                                                    <rect key="frame" x="87" y="7" width="94" height="30"/>
+                                                    <state key="normal" title="Send Email">
+                                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="sendEmail:" destination="3eS-mu-ab5" eventType="touchUpInside" id="HmN-95-AIJ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -232,78 +266,19 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="fHy-MQ-i3F"/>
-                    <navigationItem key="navigationItem" id="rqa-Vf-g3j">
-                        <barButtonItem key="rightBarButtonItem" title="Make Appointment" id="ofH-fX-5Yb">
-                            <connections>
-                                <segue destination="UvU-V1-72Q" kind="push" id="u49-1U-t64"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="rqa-Vf-g3j"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lblEmail" destination="Jh4-Du-UTX" id="9Vq-lL-aLQ"/>
                         <outlet property="lblFirstName" destination="fx4-3q-EPD" id="aLy-Ud-Xet"/>
                         <outlet property="lblLastName" destination="TsT-Hi-moj" id="JLt-4f-1li"/>
+                        <outlet property="txtDate" destination="1Gc-DK-dKM" id="Fhq-of-EEd"/>
+                        <outlet property="txtTime" destination="J5l-6H-nrm" id="0Ta-kC-buV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V49-pd-ZMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2396" y="694"/>
-        </scene>
-        <!--Schedule Appt Table View Controller-->
-        <scene sceneID="sZn-pJ-t2a">
-            <objects>
-                <tableViewController id="UvU-V1-72Q" customClass="ScheduleApptTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="IVK-t8-8iK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="XDP-Nh-Rk7">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ho7-0L-vfp">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ho7-0L-vfp" id="X9h-xf-fgk">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Appointment Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Rj-62-aBt">
-                                                    <rect key="frame" x="8" y="5" width="584" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Pad-Ff-ail">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pad-Ff-ail" id="Yyg-X8-6hV">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Appointment Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r7Q-2e-Ahu">
-                                                    <rect key="frame" x="8" y="5" width="584" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="UvU-V1-72Q" id="Egp-8s-8ht"/>
-                            <outlet property="delegate" destination="UvU-V1-72Q" id="fqQ-Vh-Kms"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="D9Q-bV-wxM"/>
-                    <connections>
-                        <outlet property="txtDate" destination="r7Q-2e-Ahu" id="Lek-OC-pqy"/>
-                        <outlet property="txtTime" destination="8Rj-62-aBt" id="fQ2-57-4k2"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="diE-ZU-nix" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3123" y="694"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uGJ-K0-ka1">
