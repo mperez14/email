@@ -20,6 +20,7 @@
 -(NSUInteger) countOfContactList;   //num of elements in contactList
 -(Contact*) contactAtIndex:(NSUInteger) index;  //element number in list (returns specfic contact)
 -(void) addNewContact:(Contact*) newContact;    //add a new Contact to the list
+-(void) deleteContact:(NSIndexPath *) indexPath;
 //(return type)         //parameter type    //parameter input
 
 @end

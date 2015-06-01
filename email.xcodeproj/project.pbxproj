@@ -75,10 +75,10 @@
 			children = (
 				074646F71B1A580000DDC4B1 /* ContactListTableViewController.h */,
 				074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */,
-				074646FC1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.h */,
-				074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */,
 				074646F41B1A3B8C00DDC4B1 /* ContactListDataController.h */,
 				074646F51B1A3B8C00DDC4B1 /* ContactListDataController.m */,
+				074646FC1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.h */,
+				074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */,
 				074646F11B1A132600DDC4B1 /* Contact.h */,
 				074646F21B1A132600DDC4B1 /* Contact.m */,
 				074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */,

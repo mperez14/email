@@ -31,6 +31,7 @@
 //implementation of count method
 -(NSUInteger)countOfContactList{
     //return number of contacts in list
+    NSLog(@"ContactList Size: %d", [contactList count]);
     return [contactList count];
 }
 
@@ -42,5 +43,11 @@
 -(void)addNewContact:(Contact *)newContact{
     [contactList addObject:newContact];
 }
+
+-(void)deleteContact:(NSIndexPath *)indexPath{
+    //[contactList removeObjectAtIndex:indexPath.row];
+}
+
+
 
 @end

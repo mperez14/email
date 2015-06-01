@@ -14,8 +14,7 @@
 {
     ContactListDataController* dataController;
 }
-
-//define action for cancel button from AddNewContactView
+ 
 -(IBAction)cancel:(UIStoryboardSegue*) segue;
 -(IBAction)done:(UIStoryboardSegue*) segue;
 @end
