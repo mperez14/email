@@ -74,9 +74,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-hn-KAq">
-                                                    <rect key="frame" x="28" y="8" width="529" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="529" height="30"/>
                                                     <fontDescription key="fontDescription" name="Symbol" family="Symbol" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="NsA-S6-fOs" id="sQn-Iy-Z5v"/>
                                                     </connections>
@@ -90,9 +90,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5o-vp-vsg">
-                                                    <rect key="frame" x="28" y="8" width="532" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="532" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="NsA-S6-fOs" id="OmK-hU-E0L"/>
                                                     </connections>
@@ -106,9 +106,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FHM-12-pfb">
-                                                    <rect key="frame" x="29" y="9" width="534" height="30"/>
+                                                    <rect key="frame" x="8" y="9" width="534" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="NsA-S6-fOs" id="gyp-8y-SNg"/>
                                                     </connections>
@@ -207,36 +207,17 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Schedule Appointment" id="fEu-a9-UAb">
                                 <cells>
-                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KLy-2O-tEq">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KLy-2O-tEq" id="5qi-kD-ebM">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Appointment Time" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J5l-6H-nrm">
-                                                    <rect key="frame" x="8" y="7" width="276" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="3eS-mu-ab5" id="ion-Xt-a1k"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GPV-xa-aAY">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="199" id="GPV-xa-aAY">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GPV-xa-aAY" id="mxo-xT-lfV">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Appointment Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Gc-DK-dKM">
-                                                    <rect key="frame" x="8" y="5" width="276" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="3eS-mu-ab5" id="2k5-eV-Jay"/>
-                                                    </connections>
-                                                </textField>
+                                                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="3cz-7s-fKZ">
+                                                    <rect key="frame" x="8" y="23" width="314" height="162"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="454876997.28667802">
+                                                        <!--2015-06-01 18:43:17 +0000-->
+                                                    </date>
+                                                </datePicker>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -246,9 +227,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZV-Ky-4xY">
-                                                    <rect key="frame" x="87" y="7" width="94" height="30"/>
+                                                    <rect key="frame" x="20" y="7" width="100" height="22"/>
                                                     <state key="normal" title="Send Email">
-                                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="sendEmail:" destination="3eS-mu-ab5" eventType="touchUpInside" id="HmN-95-AIJ"/>
@@ -272,8 +253,8 @@
                         <outlet property="lblEmail" destination="Jh4-Du-UTX" id="9Vq-lL-aLQ"/>
                         <outlet property="lblFirstName" destination="fx4-3q-EPD" id="aLy-Ud-Xet"/>
                         <outlet property="lblLastName" destination="TsT-Hi-moj" id="JLt-4f-1li"/>
-                        <outlet property="txtDate" destination="1Gc-DK-dKM" id="Fhq-of-EEd"/>
-                        <outlet property="txtTime" destination="J5l-6H-nrm" id="0Ta-kC-buV"/>
+                        <outlet property="pickerDateTime" destination="3cz-7s-fKZ" id="MTp-YM-5A6"/>
+                        <outlet property="sendButton" destination="9ZV-Ky-4xY" id="d8h-uv-nMZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V49-pd-ZMR" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,10 +14,14 @@
 
 @implementation ContactDetailTableViewController
 @synthesize contact;
-@synthesize lblEmail, lblFirstName, lblLastName, txtDate, txtTime;
+@synthesize lblEmail, lblFirstName, lblLastName, txtDate, txtTime, pickerDateTime, sendButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    sendButton.layer.cornerRadius = 2;
+    sendButton.layer.borderWidth = 1;
+    sendButton.layer.borderColor = [UIColor blueColor].CGColor;
+    sendButton.clipsToBounds = YES;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -32,8 +36,62 @@
 
 - (IBAction)sendEmail:(id)sender {
     NSLog(@"Email Sent");
-    [self dismissViewControllerAnimated:true completion:nil];
+    //format date
+    NSDate *myDate = pickerDateTime.date;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
+    NSString *prettyVersion = [dateFormat stringFromDate:myDate];
+    //pretty version = email version of date and time
+    NSLog(@"%@",prettyVersion);
+    NSLog(@"%@ %@ @ %@", lblFirstName.text, lblLastName.text, lblEmail.text);
+    
+    //SEND EMAIL
+    NSString *emailTitle = @"Appointment Date/Time";
+    // Email Content
+    NSString *messageBody =[NSString stringWithFormat:@"Aloha %@, Your next appointment is scheduled for %@", lblFirstName.text, prettyVersion];
+    // To address
+    NSString *emailAddress = [NSString stringWithFormat:@"%@", lblEmail.text];
+    NSArray *toRecipents = [NSArray arrayWithObject:emailAddress];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+    
+    //[self dismissViewControllerAnimated:true completion:nil];
 }
+
+//mail code
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
 /*
 - (BOOL)disablesAutomaticKeyboardDismissal {
     return NO;

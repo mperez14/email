@@ -17,6 +17,7 @@
 		074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */; };
 		074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */; };
 		074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */; };
+		07FD816C1B1E309C0087E52F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FD816B1B1E309C0087E52F /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailTableViewController.m; sourceTree = "<group>"; };
 		074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTableViewController.h; sourceTree = "<group>"; };
 		074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTableViewController.m; sourceTree = "<group>"; };
+		07FD816B1B1E309C0087E52F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FD816C1B1E309C0087E52F /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,7 @@
 		074646B11B18EE2D00DDC4B1 = {
 			isa = PBXGroup;
 			children = (
+				07FD816B1B1E309C0087E52F /* MessageUI.framework */,
 				074646F71B1A580000DDC4B1 /* ContactListTableViewController.h */,
 				074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */,
 				074646F41B1A3B8C00DDC4B1 /* ContactListDataController.h */,
