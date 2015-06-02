@@ -35,20 +35,17 @@
 }
 
 - (IBAction)sendEmail:(id)sender {
-    NSLog(@"Email Sent");
     //format date
     NSDate *myDate = pickerDateTime.date;
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"cccc, MMM d, hh:mm aa"];
+    [dateFormat setDateFormat:@"cccc, MMM d hh:mm aa"];
     NSString *prettyVersion = [dateFormat stringFromDate:myDate];
     //pretty version = email version of date and time
-    NSLog(@"%@",prettyVersion);
-    NSLog(@"%@ %@ @ %@", lblFirstName.text, lblLastName.text, lblEmail.text);
     
     //SEND EMAIL
     NSString *emailTitle = @"Appointment Date/Time";
     // Email Content
-    NSString *messageBody =[NSString stringWithFormat:@"Aloha %@, Your next appointment is scheduled for %@", lblFirstName.text, prettyVersion];
+    NSString *messageBody =[NSString stringWithFormat:@"Aloha %@,\nYour next appointment is scheduled for %@", lblFirstName.text, prettyVersion];
     // To address
     NSString *emailAddress = [NSString stringWithFormat:@"%@", lblEmail.text];
     NSArray *toRecipents = [NSArray arrayWithObject:emailAddress];
