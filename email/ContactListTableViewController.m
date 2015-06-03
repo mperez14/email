@@ -20,8 +20,24 @@
     dataController = [[ContactListDataController alloc] init];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;    //add edit button
     
-    //[self.tableView reloadData];
-    //self.editing=YES;
+    // Find out the path of recipes.plist
+    /*NSString *path = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
+    
+    // Load the file content and read the data into arrays
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSArray* firstName = [dict objectForKey:@"firstName"];
+    NSArray* lastName = [dict objectForKey:@"lastName"];
+    NSArray* email = [dict objectForKey:@"email"];
+    NSLog(@"%d",firstName.count);
+    for (int i =0; i<firstName.count; i++) {
+        NSLog(@"%@",firstName[i]);
+        Contact* initialName = [Contact alloc];     //init Contact
+        initialName = [initialName initWithFirstName:firstName[i] LastName:lastName[i] Email:email[i]]; //init my contact
+        NSLog(@"%@",initialName);
+        [dataController.contactList addObject:initialName];    //add contact to list
+    }
+    [self.tableView reloadData];
+     */
 }
 
 //implement cancel method to respond to cancelbutton of AddNewContactView
@@ -45,7 +61,6 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([[segue identifier] isEqualToString:@"ShowDetailsSegue"]){//segue points to ContactDetailViewController
         ContactDetailTableViewController* destination=[segue destinationViewController];
-        
         //get selected index
         NSInteger index = [self.tableView indexPathForSelectedRow].row;
         Contact* selectedContact = [dataController contactAtIndex:index]; //get selected contact

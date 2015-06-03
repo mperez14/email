@@ -17,7 +17,8 @@
 		074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */; };
 		074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */; };
 		074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */; };
-		07FD816C1B1E309C0087E52F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FD816B1B1E309C0087E52F /* MessageUI.framework */; };
+		07FD818E1B1E85AC0087E52F /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07FD818D1B1E85AC0087E52F /* Contacts.plist */; };
+		07FD81901B1E864D0087E52F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FD818F1B1E864D0087E52F /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,8 @@
 		074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailTableViewController.m; sourceTree = "<group>"; };
 		074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTableViewController.h; sourceTree = "<group>"; };
 		074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTableViewController.m; sourceTree = "<group>"; };
-		07FD816B1B1E309C0087E52F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		07FD818D1B1E85AC0087E52F /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = email/Contacts.plist; sourceTree = "<group>"; };
+		07FD818F1B1E864D0087E52F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07FD816C1B1E309C0087E52F /* MessageUI.framework in Frameworks */,
+				07FD81901B1E864D0087E52F /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +78,7 @@
 		074646B11B18EE2D00DDC4B1 = {
 			isa = PBXGroup;
 			children = (
-				07FD816B1B1E309C0087E52F /* MessageUI.framework */,
+				07FD818F1B1E864D0087E52F /* MessageUI.framework */,
 				074646F71B1A580000DDC4B1 /* ContactListTableViewController.h */,
 				074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */,
 				074646F41B1A3B8C00DDC4B1 /* ContactListDataController.h */,
@@ -87,6 +89,7 @@
 				074646F21B1A132600DDC4B1 /* Contact.m */,
 				074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */,
 				074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */,
+				07FD818D1B1E85AC0087E52F /* Contacts.plist */,
 				074646BC1B18EE2E00DDC4B1 /* email */,
 				074646D61B18EE2E00DDC4B1 /* emailTests */,
 				074646BB1B18EE2E00DDC4B1 /* Products */,
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FD818E1B1E85AC0087E52F /* Contacts.plist in Resources */,
 				074646C91B18EE2E00DDC4B1 /* Main.storyboard in Resources */,
 				074646CB1B18EE2E00DDC4B1 /* Images.xcassets in Resources */,
 			);
@@ -361,6 +365,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = email/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +379,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = email/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

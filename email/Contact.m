@@ -19,7 +19,6 @@
         first = tempFirst;
         last = tempLast;
         email = tempEmail;
-        
         return self;
     }
     else{//no object created in self
