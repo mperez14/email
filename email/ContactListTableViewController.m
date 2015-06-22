@@ -9,6 +9,7 @@
 #import "ContactListTableViewController.h"
 #import "ContactDetailTableViewController.h"
 #import "AddNewTableViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface ContactListTableViewController ()
 
@@ -46,6 +47,16 @@
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
+//Core Data
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 -(void)done:(UIStoryboardSegue *)segue{
     AddNewTableViewController* addNewController = [segue sourceViewController];
     Contact* newContact = [addNewController contact];
@@ -56,6 +67,7 @@
     //dismiss addNewViewController
     [self dismissViewControllerAnimated:true completion:nil];
 }
+
 
 //prepare seque to pass contact info that was selected to the ContactDetailViewController
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -124,6 +136,36 @@
         
         [dataController.contactList removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsPath = [paths objectAtIndex:0];
+        NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Contacts.plist"];
+        NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:(NSString *)plistPath];
+        
+        //load plist dict
+        NSMutableArray *tempFirst = [dictionary objectForKey:@"firstName"];
+        NSMutableArray *tempLast = [dictionary objectForKey:@"lastName"];
+        NSMutableArray *tempEmail = [dictionary objectForKey:@"email"];
+        
+        NSLog(@"dict loaded: %@", dictionary);
+        NSLog(@"dict loaded FIRST: %@", tempFirst);
+        NSLog(@"dict loaded LAST: %@", tempLast);
+        NSLog(@"dict loaded EMAIL: %@", tempEmail);
+        
+        //remove plist object
+        [tempFirst removeObjectAtIndex:indexPath.row];
+        [tempLast removeObjectAtIndex:indexPath.row];
+        [tempEmail removeObjectAtIndex:indexPath.row];
+        NSLog(@"dict 2 FIRST: %@", tempFirst);
+        NSLog(@"dict 2 LAST: %@", tempLast);
+        NSLog(@"dict 2 EMAIL: %@", tempEmail);
+        
+        //write to new dict
+        [dictionary setValue:tempFirst forKey:@"firstName"];
+        [dictionary setValue:tempLast forKey:@"lastName"];
+        [dictionary setValue:tempEmail forKey:@"email"];
+        
+        [dictionary writeToFile:plistPath atomically:YES];
         
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
