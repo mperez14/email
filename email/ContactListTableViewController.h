@@ -13,8 +13,9 @@
 //create instance of ContactListDataController
 {
     ContactListDataController* dataController;
+    
 }
- 
+
 -(IBAction)cancel:(UIStoryboardSegue*) segue;
 -(IBAction)done:(UIStoryboardSegue*) segue;
 @end

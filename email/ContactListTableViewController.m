@@ -21,24 +21,6 @@
     dataController = [[ContactListDataController alloc] init];
     self.navigationItem.leftBarButtonItem = self.editButtonItem;    //add edit button
     
-    // Find out the path of recipes.plist
-    /*NSString *path = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
-    
-    // Load the file content and read the data into arrays
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSArray* firstName = [dict objectForKey:@"firstName"];
-    NSArray* lastName = [dict objectForKey:@"lastName"];
-    NSArray* email = [dict objectForKey:@"email"];
-    NSLog(@"%d",firstName.count);
-    for (int i =0; i<firstName.count; i++) {
-        NSLog(@"%@",firstName[i]);
-        Contact* initialName = [Contact alloc];     //init Contact
-        initialName = [initialName initWithFirstName:firstName[i] LastName:lastName[i] Email:email[i]]; //init my contact
-        NSLog(@"%@",initialName);
-        [dataController.contactList addObject:initialName];    //add contact to list
-    }
-    [self.tableView reloadData];
-     */
 }
 
 //implement cancel method to respond to cancelbutton of AddNewContactView
@@ -62,6 +44,21 @@
     Contact* newContact = [addNewController contact];
     [dataController addNewContact:newContact];
     
+    //index
+    //add contact to contactDict (INDEX)
+    NSString *initial = [newContact.last substringToIndex:1];    //what letter to save to (initial)
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init]; //extract data
+    for(int i=0;i<[[dataController.contactDict objectForKey:initial] count]; i++){
+        NSLog(@"List of names with same initial: %@", [dataController.contactDict objectForKey:initial]);
+        NSString *name = [dataController.contactDict objectForKey:initial];    //get last name in dict for specfic initial
+        [tempArray addObject:name]; //save to array
+    }
+    NSLog(@"initial: %@", initial);
+    
+    [tempArray addObject:newContact.last];
+    [dataController.contactDict setObject:tempArray forKey:initial];
+    
+    
     //refresh tableView and list
     [self.tableView reloadData];
     //dismiss addNewViewController
@@ -74,8 +71,19 @@
     if([[segue identifier] isEqualToString:@"ShowDetailsSegue"]){//segue points to ContactDetailViewController
         ContactDetailTableViewController* destination=[segue destinationViewController];
         //get selected index
-        NSInteger index = [self.tableView indexPathForSelectedRow].row;
-        Contact* selectedContact = [dataController contactAtIndex:index]; //get selected contact
+        
+        //(Index) Get Correct Person
+        NSIndexPath *path =[self.tableView indexPathForSelectedRow];    //return path
+        //use path to get name of contact
+        NSString *sectionTitle = [dataController.contactTitles objectAtIndex:path.section];    //get contactTitle (which letter?)
+        NSArray *sectionContact = [dataController.contactDict objectForKey:sectionTitle];   //get contacts from that letter in dictionary
+        Contact *person = [sectionContact objectAtIndex:path.row];
+        NSLog(@"index is: %@", person.first);
+        Contact* selectedContact = [dataController contactAtIndexName:person.first usingLast:person.last usingEmail:person.email]; //get selected contact (INDEX)
+    
+        
+        //NSInteger index = [self.tableView indexPathForSelectedRow].row; //returns number in row   (OLD)
+        //Contact* selectedContact = [dataController contactAtIndex:index]; //get selected contact  (OLD)
         //assign selected contact to the contact property to the destination
         [destination setContact:selectedContact];
     }
@@ -90,12 +98,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    //return 1;
+    //index
+    return [dataController.contactTitles count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section = number of contacts
-    return [dataController countOfContactList];
+    //return [dataController countOfContactList];
+    
+    //index
+    NSString *sectionTitle = [dataController.contactTitles objectAtIndex:section];
+    NSArray *sectionAnimals = [dataController.contactDict objectForKey:sectionTitle];
+    return [sectionAnimals count];
+    
 }
 
 
@@ -103,9 +119,9 @@
 {
     static NSString *CellIdentifier = @"ContactCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    //1. Get contact object at particular index
+    /*
     Contact* cellContact = [dataController contactAtIndex:indexPath.row];
+    //1. Get contact object at particular index
     
     //2. Get text label in cell
     UILabel* cellTitle = [cell textLabel];
@@ -115,6 +131,16 @@
     
     UILabel* cellDetail = [cell detailTextLabel];
     [cellDetail setText:[cellContact first]];
+    */
+    
+    //index
+    NSString *sectionTitle = [dataController.contactTitles objectAtIndex:indexPath.section];    //get contactTitle (which letter?)
+    NSArray *sectionContact = [dataController.contactDict objectForKey:sectionTitle];   //get contacts from that letter in dictionary
+    Contact *person = [sectionContact objectAtIndex:indexPath.row];    //get person from dictionary
+    NSLog(@"%@", person.first);
+    NSString *name = [NSString stringWithFormat:@"%@ %@", person.first, person.last];
+    cell.textLabel.text = name;
+    cell.detailTextLabel.text = nil;
     
     return cell;
 }
@@ -133,7 +159,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        
+        //plist deletion
         [dataController.contactList removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
@@ -167,12 +193,21 @@
         
         [dictionary writeToFile:plistPath atomically:YES];
         
+        
+        //INDEX (Remove object)
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
 
 
+/*index
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [dataController.contactTitles objectAtIndex:section];
+}
+*/
 
 /*
 // Override to support rearranging the table view.

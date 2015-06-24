@@ -17,10 +17,10 @@
 		074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */; };
 		074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */; };
 		074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */; };
+		07B07DDA1B38FFBE008627F9 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07B07DD91B38FFBE008627F9 /* Contacts.plist */; };
 		07E809931B2DF082004385C9 /* AppIcon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E809901B2DF082004385C9 /* AppIcon_2.png */; };
 		07E809941B2DF082004385C9 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E809911B2DF082004385C9 /* AppIcon.png */; };
 		07E809951B2DF082004385C9 /* AppIcon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E809921B2DF082004385C9 /* AppIcon_3.png */; };
-		07FD818E1B1E85AC0087E52F /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07FD818D1B1E85AC0087E52F /* Contacts.plist */; };
 		07FD81901B1E864D0087E52F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FD818F1B1E864D0087E52F /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,10 +55,10 @@
 		074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailTableViewController.m; sourceTree = "<group>"; };
 		074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTableViewController.h; sourceTree = "<group>"; };
 		074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTableViewController.m; sourceTree = "<group>"; };
+		07B07DD91B38FFBE008627F9 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = email/Contacts.plist; sourceTree = "<group>"; };
 		07E809901B2DF082004385C9 /* AppIcon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_2.png; sourceTree = "<group>"; };
 		07E809911B2DF082004385C9 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		07E809921B2DF082004385C9 /* AppIcon_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_3.png; sourceTree = "<group>"; };
-		07FD818D1B1E85AC0087E52F /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = email/Contacts.plist; sourceTree = "<group>"; };
 		07FD818F1B1E864D0087E52F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -95,7 +95,7 @@
 				074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */,
 				074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */,
 				074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */,
-				07FD818D1B1E85AC0087E52F /* Contacts.plist */,
+				07B07DD91B38FFBE008627F9 /* Contacts.plist */,
 				074646BC1B18EE2E00DDC4B1 /* email */,
 				074646D61B18EE2E00DDC4B1 /* emailTests */,
 				074646BB1B18EE2E00DDC4B1 /* Products */,
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E809941B2DF082004385C9 /* AppIcon.png in Resources */,
-				07FD818E1B1E85AC0087E52F /* Contacts.plist in Resources */,
+				07B07DDA1B38FFBE008627F9 /* Contacts.plist in Resources */,
 				07E809951B2DF082004385C9 /* AppIcon_3.png in Resources */,
 				074646C91B18EE2E00DDC4B1 /* Main.storyboard in Resources */,
 				074646CB1B18EE2E00DDC4B1 /* Images.xcassets in Resources */,
