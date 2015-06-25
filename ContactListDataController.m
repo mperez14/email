@@ -18,11 +18,11 @@
         NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsPath = [paths objectAtIndex:0];
         NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Contacts.plist"];
-        
-        if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if (![fileManager fileExistsAtPath:plistPath])
         {
             NSLog(@"Error loading");
-            //plistPath = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
+            plistPath = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
         }
         
        
@@ -30,37 +30,33 @@
         contactTitles = [[NSMutableArray alloc] init];
         contactDict = [[NSMutableDictionary alloc] init];
         
-        NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
         NSLog(@"dict load: %@", dict);
         NSArray* firstName = [dict objectForKey:@"firstName"];
         NSArray* lastName = [dict objectForKey:@"lastName"];
         NSArray* email = [dict objectForKey:@"email"];
-        //NSLog(@"%@ %@, %@", firstName, lastName, email);
+        //NSLog(@"firstNAem array: %@", email);
+        //NSLog(@"count: %lu", (unsigned long)firstName.count);
         for (int i =0; i<firstName.count; i++) {
             Contact* initialName = [Contact alloc];     //init Contact
             initialName = [initialName initWithFirstName:firstName[i] LastName:lastName[i] Email:email[i]]; //init my contact
             [contactList addObject:initialName];    //add contact to list
         }
-       
+        //NSLog(@"ContactList: %@", contactList);
         
         //LOAD INDEX PLIST. everytime list is loaded. Create dictionary
         for (char a = 'A'; a <= 'Z'; a++){  //go thru alphabe
             NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-            //NSLog(@"letter compare: %@", [NSString stringWithFormat:@"%c",a]);
             for(int i=0;i<[contactList count]; i++){ //for each letter go through list of people
                 Contact* person = contactList[i];
                 NSString *initial = [person.last substringToIndex:1];//get initial of last name
-               // NSLog(@"initial: %@", initial);
                 if([initial isEqualToString:[NSString stringWithFormat:@"%c",a]]){ //add people whos initial matches alphabet
-                    NSLog(@"Added");
                     [tempArray addObject:person]; //array contains people of only one letter
                 }
             }
-            //NSLog(@"%c : %@", a, tempArray);
             //[contactDict setObject:tempArray forKey:a];
             [contactDict setValue:tempArray forKey:[NSString stringWithFormat:@"%c", a]];
         }
-        //NSLog(@"contactDict: %@", contactDict);
         
         contactTitles = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
          
@@ -80,7 +76,6 @@
 //implementation of count method
 -(NSUInteger)countOfContactList{
     //return number of contacts in list
-    //NSLog(@"ContactList Size: %d", [contactList count]);
     return [contactList count];
 }
 
@@ -100,7 +95,6 @@
     }
     NSLog(@"Person not found");
     return nil;
-    //return [contactList objectAtIndex:name];
 }
 
 
@@ -123,7 +117,6 @@
         dict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
         // If the file doesn’t exist, create an empty plist file
         plistFilePath = [documentsDirectory stringByAppendingPathComponent:@"Contacts.plist"];
-        //NSLog(@"path is %@",plistFilePath);
         
     }
     else{
@@ -147,7 +140,6 @@
     }
     
     //add stuff to array
-    //NSLog(@"array: %@", contentArray);
     [firstNameArray addObject:newContact.first];
     [lastNameArray addObject:newContact.last];
     [emailArray addObject:newContact.email];

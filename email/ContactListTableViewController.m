@@ -52,21 +52,20 @@
     for(int i=0;i<[[dataController.contactDict objectForKey:initial] count]; i++){
         tempArray = [dataController.contactDict objectForKey:initial];    //get last name in dict for specfic initial
         
-        //[tempArray addObject:name]; //save to array
     }
     
-    NSLog(@"before dict: %@", dataController.contactDict);
+   // NSLog(@"before dict: %@", dataController.contactDict);
     [tempArray addObject:newContact];  //add array to contactDict (update with new contact
     [dataController.contactDict setObject:tempArray forKey:initial];    //add array to dict
-    NSLog(@"after dict: %@", dataController.contactDict);
+   // NSLog(@"after dict: %@", dataController.contactDict);
     
-    Contact *person = [[Contact alloc] init];
-    NSArray *array= [dataController.contactDict objectForKey:initial];
-    NSLog(@"array: %@", array);
-    for(int i=0; i<[[dataController.contactDict objectForKey:initial] count]; i++){
-        person = array[i];
-        NSLog(@"contactDict at initial saved: %@", person.last);
-    }
+//    Contact *person = [[Contact alloc] init];
+//    NSArray *array= [dataController.contactDict objectForKey:initial];
+//    NSLog(@"array: %@", array);
+//    for(int i=0; i<[[dataController.contactDict objectForKey:initial] count]; i++){
+//        person = array[i];
+//        NSLog(@"contactDict at initial saved: %@", person.last);
+//    }
     
     //refresh tableView and list
     [self.tableView reloadData];
@@ -171,10 +170,10 @@
         
         //INDEX (Remove object)
         //remove from contactDict
-        for(int i =0;i< [dataController.contactList count];i++){
-            Contact *testguy = dataController.contactList[i];
-            NSLog(@"before delete: %@ %@", testguy.first, testguy.last);
-        }
+//        for(int i =0;i< [dataController.contactList count];i++){
+//            Contact *testguy = dataController.contactList[i];
+//            NSLog(@"before delete: %@ %@", testguy.first, testguy.last);
+//        }
         
         NSIndexPath *path =[self.tableView indexPathForSelectedRow];    //return path
         //use path to get name of contact
@@ -190,10 +189,10 @@
         [dataController.contactList removeObject:person];   //remove contact from contactList
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
-        for(int i =0;i< [dataController.contactList count];i++){
-            Contact *testguy = dataController.contactList[i];
-            NSLog(@"after delete: %@ %@", testguy.first, testguy.last);
-        }
+//        for(int i =0;i< [dataController.contactList count];i++){
+//            Contact *testguy = dataController.contactList[i];
+//            NSLog(@"after delete: %@ %@", testguy.first, testguy.last);
+//        }
         
         //plist deletion
         NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
@@ -207,23 +206,25 @@
         NSMutableArray *tempLast = [dictionary objectForKey:@"lastName"];
         NSMutableArray *tempEmail = [dictionary objectForKey:@"email"];
         
-        NSLog(@"dict loaded: %@", dictionary);
-        NSLog(@"dict loaded FIRST: %@", tempFirst);
-        NSLog(@"dict loaded LAST: %@", tempLast);
-        NSLog(@"dict loaded EMAIL: %@", tempEmail);
+        //NSLog(@"dict loaded: %@", dictionary);
+        //NSLog(@"dict loaded FIRST: %@", tempFirst);
+        //NSLog(@"dict loaded LAST: %@", tempLast);
+        //NSLog(@"dict loaded EMAIL: %@", tempEmail);
         
        /* //remove plist object from temp array
         [tempFirst removeObjectAtIndex:indexPath.row];
         [tempLast removeObjectAtIndex:indexPath.row];
         [tempEmail removeObjectAtIndex:indexPath.row];
         */
+        
+        //remove plist object from temp array
         [tempFirst removeObject:person.first];
         [tempLast removeObject:person.last];
         [tempEmail removeObject:person.email];
         
-        NSLog(@"dict 2 FIRST: %@", tempFirst);
-        NSLog(@"dict 2 LAST: %@", tempLast);
-        NSLog(@"dict 2 EMAIL: %@", tempEmail);
+        //NSLog(@"dict 2 FIRST: %@", tempFirst);
+        //NSLog(@"dict 2 LAST: %@", tempLast);
+        //NSLog(@"dict 2 EMAIL: %@", tempEmail);
         
         //write to new dict
         [dictionary setValue:tempFirst forKey:@"firstName"];
