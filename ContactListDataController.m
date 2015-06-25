@@ -21,6 +21,7 @@
         
         if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
         {
+            NSLog(@"Error Loading");
             plistPath = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
         }
         
@@ -88,11 +89,11 @@
     NSMutableArray *firstNameArray= [[NSMutableArray alloc]init];
     NSMutableArray *lastNameArray= [[NSMutableArray alloc]init];
     NSMutableArray *emailArray= [[NSMutableArray alloc]init];
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistFilePath];
     
     
     
-    if (![fileManager fileExistsAtPath: path])
+    if (![fileManager fileExistsAtPath: plistFilePath])
     {
         NSLog(@"File does not exist");
         
