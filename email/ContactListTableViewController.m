@@ -47,17 +47,26 @@
     //index
     //add contact to contactDict (INDEX)
     NSString *initial = [newContact.last substringToIndex:1];    //what letter to save to (initial)
+    [initial uppercaseString];  //capitalize initial
     NSMutableArray *tempArray = [[NSMutableArray alloc] init]; //extract data
     for(int i=0;i<[[dataController.contactDict objectForKey:initial] count]; i++){
-        NSLog(@"List of names with same initial: %@", [dataController.contactDict objectForKey:initial]);
-        NSString *name = [dataController.contactDict objectForKey:initial];    //get last name in dict for specfic initial
-        [tempArray addObject:name]; //save to array
+        tempArray = [dataController.contactDict objectForKey:initial];    //get last name in dict for specfic initial
+        
+        //[tempArray addObject:name]; //save to array
     }
-    NSLog(@"initial: %@", initial);
     
-    [tempArray addObject:newContact.last];
-    [dataController.contactDict setObject:tempArray forKey:initial];
+    NSLog(@"before dict: %@", dataController.contactDict);
+    [tempArray addObject:newContact];  //add array to contactDict (update with new contact
+    [dataController.contactDict setObject:tempArray forKey:initial];    //add array to dict
+    NSLog(@"after dict: %@", dataController.contactDict);
     
+    Contact *person = [[Contact alloc] init];
+    NSArray *array= [dataController.contactDict objectForKey:initial];
+    NSLog(@"array: %@", array);
+    for(int i=0; i<[[dataController.contactDict objectForKey:initial] count]; i++){
+        person = array[i];
+        NSLog(@"contactDict at initial saved: %@", person.last);
+    }
     
     //refresh tableView and list
     [self.tableView reloadData];
@@ -137,7 +146,7 @@
     NSString *sectionTitle = [dataController.contactTitles objectAtIndex:indexPath.section];    //get contactTitle (which letter?)
     NSArray *sectionContact = [dataController.contactDict objectForKey:sectionTitle];   //get contacts from that letter in dictionary
     Contact *person = [sectionContact objectAtIndex:indexPath.row];    //get person from dictionary
-    NSLog(@"%@", person.first);
+    //NSLog(@"%@", person.first);
     NSString *name = [NSString stringWithFormat:@"%@ %@", person.first, person.last];
     cell.textLabel.text = name;
     cell.detailTextLabel.text = nil;
@@ -159,14 +168,39 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        //plist deletion
-        [dataController.contactList removeObjectAtIndex:indexPath.row];
+        
+        //INDEX (Remove object)
+        //remove from contactDict
+        for(int i =0;i< [dataController.contactList count];i++){
+            Contact *testguy = dataController.contactList[i];
+            NSLog(@"before delete: %@ %@", testguy.first, testguy.last);
+        }
+        
+        NSIndexPath *path =[self.tableView indexPathForSelectedRow];    //return path
+        //use path to get name of contact
+        NSString *sectionTitle = [dataController.contactTitles objectAtIndex:indexPath.section];    //get contactTitle (which letter?)
+        //NSLog(@"section title: %@", sectionTitle);
+        NSMutableArray *sectionContact = [dataController.contactDict objectForKey:sectionTitle];   //get contacts from that letter in dictionary
+        Contact *person = [sectionContact objectAtIndex:path.row];
+        //NSLog(@"index to delete is: %@ %@", person.first, person.last);
+        
+        [sectionContact removeObjectAtIndex:indexPath.row];
+        [dataController.contactDict setObject:sectionContact forKey:sectionTitle];
+        
+        [dataController.contactList removeObject:person];   //remove contact from contactList
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
+        for(int i =0;i< [dataController.contactList count];i++){
+            Contact *testguy = dataController.contactList[i];
+            NSLog(@"after delete: %@ %@", testguy.first, testguy.last);
+        }
+        
+        //plist deletion
         NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsPath = [paths objectAtIndex:0];
         NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Contacts.plist"];
-        NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:(NSString *)plistPath];
+        //NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithContentsOfFile:(NSString *)plistPath];
+        NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
         
         //load plist dict
         NSMutableArray *tempFirst = [dictionary objectForKey:@"firstName"];
@@ -178,10 +212,15 @@
         NSLog(@"dict loaded LAST: %@", tempLast);
         NSLog(@"dict loaded EMAIL: %@", tempEmail);
         
-        //remove plist object
+       /* //remove plist object from temp array
         [tempFirst removeObjectAtIndex:indexPath.row];
         [tempLast removeObjectAtIndex:indexPath.row];
         [tempEmail removeObjectAtIndex:indexPath.row];
+        */
+        [tempFirst removeObject:person.first];
+        [tempLast removeObject:person.last];
+        [tempEmail removeObject:person.email];
+        
         NSLog(@"dict 2 FIRST: %@", tempFirst);
         NSLog(@"dict 2 LAST: %@", tempLast);
         NSLog(@"dict 2 EMAIL: %@", tempEmail);
@@ -191,23 +230,24 @@
         [dictionary setValue:tempLast forKey:@"lastName"];
         [dictionary setValue:tempEmail forKey:@"email"];
         
-        [dictionary writeToFile:plistPath atomically:YES];
-        
-        
-        //INDEX (Remove object)
-        
+        [dictionary writeToFile:plistPath atomically:YES];  //write to plist
+        for(int i=0;i<3;i++){
+            NSString *first = [dictionary objectForKey:@"firstName"];
+            NSString *last = [dictionary objectForKey:@"lastName"];
+            NSLog(@"dictionary after: %@ %@", first, last);
+        }
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
 
 
-/*index
+//index
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return [dataController.contactTitles objectAtIndex:section];
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

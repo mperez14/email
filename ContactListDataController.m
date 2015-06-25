@@ -21,7 +21,8 @@
         
         if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
         {
-            plistPath = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
+            NSLog(@"Error loading");
+            //plistPath = [[NSBundle mainBundle] pathForResource:@"Contacts" ofType:@"plist"];
         }
         
        
@@ -29,12 +30,12 @@
         contactTitles = [[NSMutableArray alloc] init];
         contactDict = [[NSMutableDictionary alloc] init];
         
-        NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
         NSLog(@"dict load: %@", dict);
         NSArray* firstName = [dict objectForKey:@"firstName"];
         NSArray* lastName = [dict objectForKey:@"lastName"];
         NSArray* email = [dict objectForKey:@"email"];
-        NSLog(@"%@ %@, %@", firstName, lastName, email);
+        //NSLog(@"%@ %@, %@", firstName, lastName, email);
         for (int i =0; i<firstName.count; i++) {
             Contact* initialName = [Contact alloc];     //init Contact
             initialName = [initialName initWithFirstName:firstName[i] LastName:lastName[i] Email:email[i]]; //init my contact
@@ -45,21 +46,21 @@
         //LOAD INDEX PLIST. everytime list is loaded. Create dictionary
         for (char a = 'A'; a <= 'Z'; a++){  //go thru alphabe
             NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-            NSLog(@"letter compare: %@", [NSString stringWithFormat:@"%c",a]);
+            //NSLog(@"letter compare: %@", [NSString stringWithFormat:@"%c",a]);
             for(int i=0;i<[contactList count]; i++){ //for each letter go through list of people
                 Contact* person = contactList[i];
                 NSString *initial = [person.last substringToIndex:1];//get initial of last name
-                NSLog(@"initial: %@", initial);
+               // NSLog(@"initial: %@", initial);
                 if([initial isEqualToString:[NSString stringWithFormat:@"%c",a]]){ //add people whos initial matches alphabet
                     NSLog(@"Added");
                     [tempArray addObject:person]; //array contains people of only one letter
                 }
             }
-            NSLog(@"%c : %@", a, tempArray);
+            //NSLog(@"%c : %@", a, tempArray);
             //[contactDict setObject:tempArray forKey:a];
             [contactDict setValue:tempArray forKey:[NSString stringWithFormat:@"%c", a]];
         }
-        NSLog(@"contactDict: %@", contactDict);
+        //NSLog(@"contactDict: %@", contactDict);
         
         contactTitles = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
          
