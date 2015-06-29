@@ -111,6 +111,8 @@
     NSMutableArray *emailArray= [[NSMutableArray alloc]init];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistFilePath];
     
+    
+    
     if (![fileManager fileExistsAtPath: plistFilePath])
     {
         NSLog(@"File does not exist. Reverting to old path and old plist will be loaded");
