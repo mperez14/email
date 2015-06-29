@@ -17,6 +17,7 @@
 		074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */; };
 		074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */; };
 		074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */; };
+		0765D20E1B41F1A700A87E2A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0765D20D1B41F1A700A87E2A /* FontAwesome.otf */; };
 		0793F4721B40C97500F3CC41 /* AppIcon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0793F46F1B40C97500F3CC41 /* AppIcon_3.png */; };
 		0793F4731B40C97500F3CC41 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0793F4701B40C97500F3CC41 /* AppIcon.png */; };
 		0793F4741B40C97500F3CC41 /* AppIcon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0793F4711B40C97500F3CC41 /* AppIcon_2.png */; };
@@ -57,6 +58,7 @@
 		074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailTableViewController.m; sourceTree = "<group>"; };
 		074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTableViewController.h; sourceTree = "<group>"; };
 		074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTableViewController.m; sourceTree = "<group>"; };
+		0765D20D1B41F1A700A87E2A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = ../Pods/FontAwesomeKit/FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
 		0793F46F1B40C97500F3CC41 /* AppIcon_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_3.png; sourceTree = "<group>"; };
 		0793F4701B40C97500F3CC41 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		0793F4711B40C97500F3CC41 /* AppIcon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_2.png; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		074646BD1B18EE2E00DDC4B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0765D20D1B41F1A700A87E2A /* FontAwesome.otf */,
 				0793F4751B40C9F000F3CC41 /* AppIcon76.png */,
 				0793F46F1B40C97500F3CC41 /* AppIcon_3.png */,
 				0793F4701B40C97500F3CC41 /* AppIcon.png */,
@@ -262,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0765D20E1B41F1A700A87E2A /* FontAwesome.otf in Resources */,
 				074646C91B18EE2E00DDC4B1 /* Main.storyboard in Resources */,
 				0793F4731B40C97500F3CC41 /* AppIcon.png in Resources */,
 				074646CB1B18EE2E00DDC4B1 /* Images.xcassets in Resources */,

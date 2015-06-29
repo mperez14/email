@@ -22,7 +22,7 @@
     [lblLastName setText:[contact last]];
     [lblEmail setText:[contact email]];
     
-    
+    /*
     NIKFontAwesomeIconFactory *factoryWhite = [NIKFontAwesomeIconFactory barButtonItemIconFactory];
     factoryWhite.square = YES;
     UIBarButtonItem *send3Button = [UIBarButtonItem new];
@@ -31,6 +31,14 @@
     send3Button.enabled = YES;
     send3Button.style = UIBarButtonItemStyleDone;
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:send3Button, nil];
+    */
+    
+    FAKFontAwesome *sendIcon = [FAKFontAwesome sendIconWithSize:20];
+    [sendIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    UIImage *takePhotoImage = [sendIcon imageWithSize:CGSizeMake(20, 20)];
+    //sendIcon.iconFontSize = 15;
+    
+    [send2Button setImage:takePhotoImage forState:normal];
     
 }
 
