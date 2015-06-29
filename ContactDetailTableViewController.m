@@ -14,7 +14,7 @@
 
 @implementation ContactDetailTableViewController
 @synthesize contact;
-@synthesize lblEmail, lblFirstName, lblLastName, send2Button, pickerDateTime, sendButton;
+@synthesize lblEmail, lblFirstName, lblLastName, pickerDateTime, sendButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,7 +38,7 @@
     UIImage *takePhotoImage = [sendIcon imageWithSize:CGSizeMake(20, 20)];
     //sendIcon.iconFontSize = 15;
     
-    [send2Button setImage:takePhotoImage forState:normal];
+    [sendButton setImage:takePhotoImage forState:normal];
     
 }
 

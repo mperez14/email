@@ -26,6 +26,5 @@
 
 - (IBAction)sendEmail:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
-@property (weak, nonatomic) IBOutlet UIButton *send2Button;
 
 @end

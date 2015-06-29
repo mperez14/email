@@ -227,19 +227,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZV-Ky-4xY">
-                                                    <rect key="frame" x="20" y="7" width="100" height="22"/>
-                                                    <state key="normal" title="Send Email">
+                                                    <rect key="frame" x="55" y="7" width="136" height="30"/>
+                                                    <state key="normal" title="  Send Email">
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="sendEmail:" destination="3eS-mu-ab5" eventType="touchUpInside" id="HmN-95-AIJ"/>
                                                     </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qM-sM-IEV">
-                                                    <rect key="frame" x="233" y="7" width="49" height="30"/>
-                                                    <state key="normal" title="Send 2">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -260,7 +254,6 @@
                         <outlet property="lblFirstName" destination="fx4-3q-EPD" id="aLy-Ud-Xet"/>
                         <outlet property="lblLastName" destination="TsT-Hi-moj" id="JLt-4f-1li"/>
                         <outlet property="pickerDateTime" destination="3cz-7s-fKZ" id="MTp-YM-5A6"/>
-                        <outlet property="send2Button" destination="5qM-sM-IEV" id="Bwh-UL-BHs"/>
                         <outlet property="sendButton" destination="9ZV-Ky-4xY" id="d8h-uv-nMZ"/>
                     </connections>
                 </tableViewController>
