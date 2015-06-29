@@ -17,12 +17,13 @@
 		074646F91B1A580000DDC4B1 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646F81B1A580000DDC4B1 /* ContactListTableViewController.m */; };
 		074646FE1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */; };
 		074647011B1A9ABF00DDC4B1 /* AddNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */; };
-		07B07DDA1B38FFBE008627F9 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07B07DD91B38FFBE008627F9 /* Contacts.plist */; };
-		07B07DDC1B3BA839008627F9 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07B07DDB1B3BA839008627F9 /* Contacts.plist */; };
-		07E809931B2DF082004385C9 /* AppIcon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E809901B2DF082004385C9 /* AppIcon_2.png */; };
-		07E809941B2DF082004385C9 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E809911B2DF082004385C9 /* AppIcon.png */; };
-		07E809951B2DF082004385C9 /* AppIcon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E809921B2DF082004385C9 /* AppIcon_3.png */; };
+		0793F4721B40C97500F3CC41 /* AppIcon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0793F46F1B40C97500F3CC41 /* AppIcon_3.png */; };
+		0793F4731B40C97500F3CC41 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0793F4701B40C97500F3CC41 /* AppIcon.png */; };
+		0793F4741B40C97500F3CC41 /* AppIcon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0793F4711B40C97500F3CC41 /* AppIcon_2.png */; };
+		0793F4761B40C9F000F3CC41 /* AppIcon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 0793F4751B40C9F000F3CC41 /* AppIcon76.png */; };
+		0793F4781B40D7AD00F3CC41 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0793F4771B40D7AD00F3CC41 /* Contacts.plist */; };
 		07FD81901B1E864D0087E52F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FD818F1B1E864D0087E52F /* MessageUI.framework */; };
+		222DB5EAB04A5609E3AF643D /* Pods_email.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726F58D63A5ADBEF8F11C712 /* Pods_email.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +57,15 @@
 		074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailTableViewController.m; sourceTree = "<group>"; };
 		074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTableViewController.h; sourceTree = "<group>"; };
 		074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTableViewController.m; sourceTree = "<group>"; };
-		07B07DD91B38FFBE008627F9 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = email/Contacts.plist; sourceTree = "<group>"; };
-		07B07DDB1B3BA839008627F9 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = email/Contacts.plist; sourceTree = "<group>"; };
-		07E809901B2DF082004385C9 /* AppIcon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_2.png; sourceTree = "<group>"; };
-		07E809911B2DF082004385C9 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
-		07E809921B2DF082004385C9 /* AppIcon_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_3.png; sourceTree = "<group>"; };
+		0793F46F1B40C97500F3CC41 /* AppIcon_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_3.png; sourceTree = "<group>"; };
+		0793F4701B40C97500F3CC41 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		0793F4711B40C97500F3CC41 /* AppIcon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon_2.png; sourceTree = "<group>"; };
+		0793F4751B40C9F000F3CC41 /* AppIcon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76.png; sourceTree = "<group>"; };
+		0793F4771B40D7AD00F3CC41 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Contacts.plist; sourceTree = "<group>"; };
 		07FD818F1B1E864D0087E52F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1301E3712A410064BF7491A9 /* Pods-email.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-email.debug.xcconfig"; path = "Pods/Target Support Files/Pods-email/Pods-email.debug.xcconfig"; sourceTree = "<group>"; };
+		1D299C86F8DF556C9C480BBC /* Pods-email.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-email.release.xcconfig"; path = "Pods/Target Support Files/Pods-email/Pods-email.release.xcconfig"; sourceTree = "<group>"; };
+		726F58D63A5ADBEF8F11C712 /* Pods_email.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_email.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07FD81901B1E864D0087E52F /* MessageUI.framework in Frameworks */,
+				222DB5EAB04A5609E3AF643D /* Pods_email.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +102,12 @@
 				074646FD1B1A8EDB00DDC4B1 /* ContactDetailTableViewController.m */,
 				074646FF1B1A9ABF00DDC4B1 /* AddNewTableViewController.h */,
 				074647001B1A9ABF00DDC4B1 /* AddNewTableViewController.m */,
-				07B07DD91B38FFBE008627F9 /* Contacts.plist */,
-				07B07DDB1B3BA839008627F9 /* Contacts.plist */,
+				0793F4771B40D7AD00F3CC41 /* Contacts.plist */,
 				074646BC1B18EE2E00DDC4B1 /* email */,
 				074646D61B18EE2E00DDC4B1 /* emailTests */,
 				074646BB1B18EE2E00DDC4B1 /* Products */,
+				AD07846779200BB84C7761CF /* Pods */,
+				149879725448E8FF9A3F940C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,9 +135,10 @@
 		074646BD1B18EE2E00DDC4B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07E809901B2DF082004385C9 /* AppIcon_2.png */,
-				07E809911B2DF082004385C9 /* AppIcon.png */,
-				07E809921B2DF082004385C9 /* AppIcon_3.png */,
+				0793F4751B40C9F000F3CC41 /* AppIcon76.png */,
+				0793F46F1B40C97500F3CC41 /* AppIcon_3.png */,
+				0793F4701B40C97500F3CC41 /* AppIcon.png */,
+				0793F4711B40C97500F3CC41 /* AppIcon_2.png */,
 				074646BE1B18EE2E00DDC4B1 /* Info.plist */,
 				074646BF1B18EE2E00DDC4B1 /* main.m */,
 			);
@@ -155,6 +162,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		149879725448E8FF9A3F940C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				726F58D63A5ADBEF8F11C712 /* Pods_email.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD07846779200BB84C7761CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1301E3712A410064BF7491A9 /* Pods-email.debug.xcconfig */,
+				1D299C86F8DF556C9C480BBC /* Pods-email.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 074646DD1B18EE2E00DDC4B1 /* Build configuration list for PBXNativeTarget "email" */;
 			buildPhases = (
+				5C06A9FBC3270E67C6A90A0E /* Check Pods Manifest.lock */,
 				074646B61B18EE2D00DDC4B1 /* Sources */,
 				074646B71B18EE2D00DDC4B1 /* Frameworks */,
 				074646B81B18EE2D00DDC4B1 /* Resources */,
+				BE37A0F6197DCD34141CD290 /* Embed Pods Frameworks */,
+				9944D669475631620B939D03 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,13 +262,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E809941B2DF082004385C9 /* AppIcon.png in Resources */,
-				07B07DDA1B38FFBE008627F9 /* Contacts.plist in Resources */,
-				07E809951B2DF082004385C9 /* AppIcon_3.png in Resources */,
 				074646C91B18EE2E00DDC4B1 /* Main.storyboard in Resources */,
+				0793F4731B40C97500F3CC41 /* AppIcon.png in Resources */,
 				074646CB1B18EE2E00DDC4B1 /* Images.xcassets in Resources */,
-				07E809931B2DF082004385C9 /* AppIcon_2.png in Resources */,
-				07B07DDC1B3BA839008627F9 /* Contacts.plist in Resources */,
+				0793F4741B40C97500F3CC41 /* AppIcon_2.png in Resources */,
+				0793F4721B40C97500F3CC41 /* AppIcon_3.png in Resources */,
+				0793F4761B40C9F000F3CC41 /* AppIcon76.png in Resources */,
+				0793F4781B40D7AD00F3CC41 /* Contacts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +280,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C06A9FBC3270E67C6A90A0E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9944D669475631620B939D03 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-email/Pods-email-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE37A0F6197DCD34141CD290 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-email/Pods-email-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		074646B61B18EE2D00DDC4B1 /* Sources */ = {
@@ -379,8 +454,10 @@
 		};
 		074646DE1B18EE2E00DDC4B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1301E3712A410064BF7491A9 /* Pods-email.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -393,8 +470,10 @@
 		};
 		074646DF1B18EE2E00DDC4B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D299C86F8DF556C9C480BBC /* Pods-email.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

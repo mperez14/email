@@ -14,23 +14,23 @@
 
 @implementation ContactDetailTableViewController
 @synthesize contact;
-@synthesize lblEmail, lblFirstName, lblLastName, txtDate, txtTime, pickerDateTime, sendButton;
+@synthesize lblEmail, lblFirstName, lblLastName, send2Button, pickerDateTime, sendButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    sendButton.layer.cornerRadius = 2;
-    sendButton.layer.borderWidth = 1;
-    sendButton.layer.borderColor = [UIColor blueColor].CGColor;
-    sendButton.clipsToBounds = YES;
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [lblFirstName setText:[contact first]];
     [lblLastName setText:[contact last]];
     [lblEmail setText:[contact email]];
     
+    
+    NIKFontAwesomeIconFactory *factoryWhite = [NIKFontAwesomeIconFactory barButtonItemIconFactory];
+    factoryWhite.square = YES;
+    UIBarButtonItem *send3Button = [UIBarButtonItem new];
+    send3Button.image = [factoryWhite createImageForIcon:NIKFontAwesomeIconSend];
+    send3Button.target = self;
+    send3Button.enabled = YES;
+    send3Button.style = UIBarButtonItemStyleDone;
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:send3Button, nil];
     
 }
 

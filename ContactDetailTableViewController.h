@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Contact.h"
 #import <MessageUI/MessageUI.h>
+#import <FontAwesomeKit/FontAwesomeKit.h>
+
+#import <FontAwesomeIconFactory/FontAwesomeIconFactory.h>
+
 
 
 @interface ContactDetailTableViewController : UITableViewController <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
@@ -18,11 +22,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblFirstName;
 @property (weak, nonatomic) IBOutlet UILabel *lblLastName;
 @property (weak, nonatomic) IBOutlet UILabel *lblEmail;
-@property (weak, nonatomic) IBOutlet UITextField *txtTime;
-@property (weak, nonatomic) IBOutlet UITextField *txtDate;
 @property (weak, nonatomic) IBOutlet UIDatePicker *pickerDateTime;
 
 - (IBAction)sendEmail:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (weak, nonatomic) IBOutlet UIButton *send2Button;
 
 @end
