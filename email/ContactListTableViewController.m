@@ -143,6 +143,7 @@
     [cellDetail setText:[cellContact first]];
     */
     
+    
     //index
     NSString *sectionTitle = [dataController.contactTitles objectAtIndex:indexPath.section];    //get contactTitle (which letter?)
     NSArray *sectionContact = [dataController.contactDict objectForKey:sectionTitle];   //get contacts from that letter in dictionary

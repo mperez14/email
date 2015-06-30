@@ -37,8 +37,16 @@
     [sendIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
     UIImage *takePhotoImage = [sendIcon imageWithSize:CGSizeMake(20, 20)];
     //sendIcon.iconFontSize = 15;
-    
+    UIBarButtonItem *send3Button = [UIBarButtonItem new];
+    send3Button.image = takePhotoImage;
+    send3Button.action = @selector(send3Email);
+    send3Button.target = self;
+    send3Button.enabled = YES;
     [sendButton setImage:takePhotoImage forState:normal];
+    
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:send3Button, nil];
+    
+    //tableView.allowsSelection = NO;
     
 }
 
@@ -67,8 +75,32 @@
     // Present mail view controller on screen
     [self presentViewController:mc animated:YES completion:NULL];
     
+}
+
+-(void) send3Email{
+    //format date
+    NSDate *myDate = pickerDateTime.date;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"cccc, MMM d hh:mm aa"];
+    NSString *prettyVersion = [dateFormat stringFromDate:myDate];
+    //pretty version = email version of date and time
     
-    //[self dismissViewControllerAnimated:true completion:nil];
+    //SEND EMAIL
+    NSString *emailTitle = @"Appointment Date/Time";
+    // Email Content
+    NSString *messageBody =[NSString stringWithFormat:@"Aloha %@,\nYour next appointment is scheduled for %@", lblFirstName.text, prettyVersion];
+    // To address
+    NSString *emailAddress = [NSString stringWithFormat:@"%@", lblEmail.text];
+    NSArray *toRecipents = [NSArray arrayWithObject:emailAddress];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
 }
 
 //mail code
@@ -113,6 +145,26 @@
     // Dispose of any resources that can be recreated.
 }
  
+- (void)tableView:(UITableView *)tableView {
+    tableView.allowsSelection = NO;
+}
+
+
+/*
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath2:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"ContactCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+    
+}
+*/
+- (BOOL)tableView:(UITableView *)tableView
+shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+    return FALSE;
+}
 
 
 /*
