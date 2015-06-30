@@ -51,28 +51,28 @@
     NSMutableArray *tempArray = [[NSMutableArray alloc] init]; //extract data
     for(int i=0;i<[[dataController.contactDict objectForKey:initial] count]; i++){
         tempArray = [dataController.contactDict objectForKey:initial];    //get last name in dict for specfic initial
-        
-        
+    }
+    
         // NSLog(@"before dict: %@", dataController.contactDict);
         [tempArray addObject:newContact];  //add array to contactDict (update with new contact
         [dataController.contactDict setObject:tempArray forKey:initial];    //add array to dict
         
         
-        // NSLog(@"after dict: %@", dataController.contactDict);
-        
-        //    Contact *person = [[Contact alloc] init];
-        //    NSArray *array= [dataController.contactDict objectForKey:initial];
-        //    NSLog(@"array: %@", array);
-        //    for(int i=0; i<[[dataController.contactDict objectForKey:initial] count]; i++){
-        //        person = array[i];
-        //        NSLog(@"contactDict at initial saved: %@", person.last);
-        //    }
+//        NSLog(@"after dict: %@", dataController.contactDict);
+//        
+//        Contact *person = [[Contact alloc] init];
+//        NSArray *array= [dataController.contactDict objectForKey:initial];
+//        NSLog(@"array: %@", array);
+//        for(int i=0; i<[[dataController.contactDict objectForKey:initial] count]; i++){
+//            person = array[i];
+//            NSLog(@"contactDict at initial saved: %@", person.last);
+//        }
+    
         
         //refresh tableView and list
         [self.tableView reloadData];
         //dismiss addNewViewController
         [self dismissViewControllerAnimated:true completion:nil];
-    }
 }
 
 

@@ -221,23 +221,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Eap-IS-J0c">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="Eap-IS-J0c" id="yup-AA-IUg">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZV-Ky-4xY">
-                                                    <rect key="frame" x="55" y="7" width="136" height="30"/>
-                                                    <state key="normal" title="  Send Email">
-                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="sendEmail:" destination="3eS-mu-ab5" eventType="touchUpInside" id="HmN-95-AIJ"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -254,7 +237,6 @@
                         <outlet property="lblFirstName" destination="fx4-3q-EPD" id="aLy-Ud-Xet"/>
                         <outlet property="lblLastName" destination="TsT-Hi-moj" id="JLt-4f-1li"/>
                         <outlet property="pickerDateTime" destination="3cz-7s-fKZ" id="MTp-YM-5A6"/>
-                        <outlet property="sendButton" destination="9ZV-Ky-4xY" id="d8h-uv-nMZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V49-pd-ZMR" userLabel="First Responder" sceneMemberID="firstResponder"/>

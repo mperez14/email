@@ -24,7 +24,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblEmail;
 @property (weak, nonatomic) IBOutlet UIDatePicker *pickerDateTime;
 
-- (IBAction)sendEmail:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *sendButton;
 
 @end
